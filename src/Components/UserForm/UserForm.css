@@ -1,0 +1,51 @@
+#userform{
+    border: 1px solid rgb(15, 14, 14);
+    width: 35rem;
+    height: 20rem;
+    position: fixed;
+    top: 150px;
+    left: 500px;
+    backdrop-filter: blur(10px);
+}
+
+#closeBtn{
+    position: relative;
+    left: 500px;
+    top: 5px;
+}
+
+#fullName{
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+#genderBox{
+    position: relative;
+    top: 40px;
+    left: 10px;
+}
+
+#ageBox{
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+
+#emailBox{
+    position: relative;
+    top: 60px;
+    left: 10px;
+}
+
+#coordinateBox{
+    position: relative;
+    top: 70px;
+    left: 10px;
+}
+
+#submitBtn{
+    position: relative;
+    top: 90px;
+    left: 10px;
+}

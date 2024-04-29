@@ -1,0 +1,61 @@
+#mainBoxForDashBoard{
+    width: 94rem;
+    text-align: left;
+}
+
+#addProfile{
+    position: relative;
+    left: 1360px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(34, 139, 238);
+}
+
+.userBoxForDashBoard{
+    border: 1px solid rgb(58, 56, 56);
+    border-radius: 10px;
+    height: 5rem;
+    width: 90rem;
+    margin: 20px 0 5px 35px;
+}
+
+.profilePicForDashBoard{
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+
+}
+
+.userNameBox{
+    display: inline-block;
+    width: 25rem;
+    position: relative;
+    top: -30px;
+    left: 50px;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.deleteBtn{
+    position: relative;
+    top: -32px;
+    left: 800px;
+    width: 5rem;
+    height: 2rem;
+    background-color: rgb(198, 208, 216);
+    color: red;
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover{
+    transform: scale(110%); 
+}
+.deleteBtn:active{
+    color: rgb(198, 208, 216);
+    background-color: red;
+}
