@@ -18,6 +18,9 @@ export default function DashBoard(){
     }
     return(
         <div id="mainBoxForDashBoard">
+
+            <h1 style={{textAlign:"center"}}>Dashboard</h1>
+
             <span id="addProfile" onClick={handleAddProfile}>+ Add Profile</span>
             {isUserFormVisible?<UserForm formVisible={(value)=>setIsUserFormVisible(value)} />:<></>}
 

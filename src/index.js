@@ -3,11 +3,33 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import UserProfile from './Components/UserProfile/UserProfile';
+import DashBoard from './Components/DashBoard/DashBoard';
+import { UserProvider } from './Components/Context/UserData';
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<App/>,
+    children:[
+      {
+        path:"",
+        element:<UserProfile/>
+      },
+      {
+        path:'/dashboard',
+        element:<DashBoard/>
+      }
+    ]
+  },
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <RouterProvider router={router}/>
+    </UserProvider>
   </React.StrictMode>
 );
 

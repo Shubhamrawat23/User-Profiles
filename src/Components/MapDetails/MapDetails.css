@@ -1,0 +1,17 @@
+#mapBox{
+    position: fixed;
+    top: 30px;
+    left: 60px;
+}
+
+#mapCloseBtn{
+    color: red;
+    font-size: xx-large;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    left: 670px;
+    top: 40px;
+    z-index: 10;
+}

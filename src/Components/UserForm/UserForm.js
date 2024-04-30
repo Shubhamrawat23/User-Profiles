@@ -8,6 +8,7 @@ export default function UserForm({formVisible}){
 
     const handleSubmit = (e)=>{
         e.preventDefault()
+        console.log("hello");
         const formData = new FormData(e.target)
 
         //checking that duplicate data not added
@@ -28,8 +29,15 @@ export default function UserForm({formVisible}){
                 gender: formData.get('gender'),
                 age: parseInt(formData.get('age')),
                 email: formData.get('email'),
-                lat: parseFloat(formData.get('lat')),
-                lon: parseFloat(formData.get('lon')),
+                phone:parseInt(formData.get('phone')),
+                address:{
+                    address:formData.get('address'),
+                    city:formData.get('city'),
+                    coordinates:{
+                        lat: parseFloat(formData.get('lat')),
+                        lng: parseFloat(formData.get('lon')),
+                    },
+                },
             }
             setUserData([...userData,newData])
         }
@@ -72,6 +80,21 @@ export default function UserForm({formVisible}){
             <div id="emailBox">
                 <label>Email: </label>
                 <input type="email" placeholder="Email Id" name="email" pattern="[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}" required/>
+            </div>
+
+            <div id="phoneBox">
+                <label>Phone: </label>
+                <input type="number" placeholder="Phone No. with country code (e.g. +xxxxxxxxxxxx)" name="phone" pattern="^\+(?:[0-9] ?){6,14}[0-9]$" required/>
+            </div>
+
+            <div id="address">
+                <label>Address: </label>
+                <textarea name="address" required/>
+            </div>
+
+            <div id="cityBox">
+                <label>City :</label>
+                <input type="text" placeholder="City Name" name="city" pattern="^[A-Za-z\s-]{2,50}$" required/>
             </div>
 
             <div id="coordinateBox">

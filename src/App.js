@@ -1,17 +1,13 @@
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import UserProfile from './Components/UserProfile/UserProfile';
-import {UserProvider} from './Components/Context/UserData.js'
-import DashBoard from './Components/DashBoard/DashBoard.js';
+import Header from './Components/Header/Header.js';
 
 function App() {
   return (
-      <div className="App">
-        <h1>User's Profiles</h1>
-        <UserProvider>
-          <DashBoard/>
-          <UserProfile/>
-        </UserProvider>
-      </div>
+    <div className="App">
+      <Header/>
+      <Outlet/>
+    </div>
   );
 }
 
